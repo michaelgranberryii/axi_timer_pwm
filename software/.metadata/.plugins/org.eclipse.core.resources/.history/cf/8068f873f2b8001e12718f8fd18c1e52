@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ASCII"?>
+<sdkproject:SdkProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sdkproject="http://www.xilinx.com/sdkproject" name="axi_timer_pwm_sw" location="/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw" platform="/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm/export/axi_timer_pwm/axi_timer_pwm.xpfm" platformUID="xilinx:zybo-z7-10::0.0(custom)" systemProject="axi_timer_pwm_sw_system" sysConfig="axi_timer_pwm" runtime="C/C++" cpu="standalone_domain" cpuInstance="ps7_cortexa9_0" os="standalone" mssSignature="dfd2743331ddb768d009a18a66d08b76">
+  <configuration name="Debug" id="xilinx.gnu.armv7.exe.debug.1964363854" dirty="true">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+    <lastBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <configuration name="Release" id="xilinx.gnu.armv7.exe.release.1407162531" dirty="true">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <template appTemplateName="hello_world"/>
+</sdkproject:SdkProject>

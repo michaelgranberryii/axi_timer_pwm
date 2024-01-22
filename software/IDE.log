@@ -1,0 +1,1732 @@
+22:15:35 DEBUG : Logs will be stored at '/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/IDE.log'.
+22:15:41 INFO  : Launching XSCT server: xsct -n  -interactive /home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/temp_xsdb_launch_script.tcl
+22:15:41 INFO  : Registering command handlers for Vitis TCF services
+22:15:42 INFO  : Platform repository initialization has completed.
+22:15:43 INFO  : XSCT server has started successfully.
+22:15:44 INFO  : plnx-install-location is set to ''
+22:15:44 INFO  : Successfully done setting XSCT server connection channel  
+22:15:44 INFO  : Successfully done query RDI_DATADIR 
+22:15:44 INFO  : Successfully done setting workspace for the tool. 
+22:16:17 INFO  : Result from executing command 'getProjects': axi_timer_pwm
+22:16:17 INFO  : Result from executing command 'getPlatforms': xilinx_zcu102_base_202310_1|/home/mg/Xilinx/Vitis/2023.1/base_platforms/xilinx_zcu102_base_202310_1/xilinx_zcu102_base_202310_1.xpfm;xilinx_zcu102_base_dfx_202310_1|/home/mg/Xilinx/Vitis/2023.1/base_platforms/xilinx_zcu102_base_dfx_202310_1/xilinx_zcu102_base_dfx_202310_1.xpfm;xilinx_zcu104_base_202310_1|/home/mg/Xilinx/Vitis/2023.1/base_platforms/xilinx_zcu104_base_202310_1/xilinx_zcu104_base_202310_1.xpfm
+22:16:40 INFO  : Result from executing command 'getProjects': axi_timer_pwm
+22:16:40 INFO  : Result from executing command 'getPlatforms': axi_timer_pwm|/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm/export/axi_timer_pwm/axi_timer_pwm.xpfm;xilinx_zcu102_base_202310_1|/home/mg/Xilinx/Vitis/2023.1/base_platforms/xilinx_zcu102_base_202310_1/xilinx_zcu102_base_202310_1.xpfm;xilinx_zcu102_base_dfx_202310_1|/home/mg/Xilinx/Vitis/2023.1/base_platforms/xilinx_zcu102_base_dfx_202310_1/xilinx_zcu102_base_dfx_202310_1.xpfm;xilinx_zcu104_base_202310_1|/home/mg/Xilinx/Vitis/2023.1/base_platforms/xilinx_zcu104_base_202310_1/xilinx_zcu104_base_202310_1.xpfm
+22:20:31 INFO  : Checking for BSP changes to sync application flags for project 'axi_timer_pwm_sw'...
+22:22:01 INFO  : Checking for BSP changes to sync application flags for project 'axi_timer_pwm_sw'...
+22:23:02 INFO  : Checking for BSP changes to sync application flags for project 'axi_timer_pwm_sw'...
+22:24:10 INFO  : Checking for BSP changes to sync application flags for project 'axi_timer_pwm_sw'...
+22:25:29 INFO  : Checking for BSP changes to sync application flags for project 'axi_timer_pwm_sw'...
+22:32:46 INFO  : Checking for BSP changes to sync application flags for project 'axi_timer_pwm_sw'...
+22:33:21 INFO  : Checking for BSP changes to sync application flags for project 'axi_timer_pwm_sw'...
+22:34:36 INFO  : Checking for BSP changes to sync application flags for project 'axi_timer_pwm_sw'...
+22:34:48 INFO  : XRT server has started successfully on port '4355'
+22:34:49 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:34:55 INFO  : Jtag cable 'Digilent Zybo Z7 210351B7A823A' is selected.
+22:34:55 INFO  : 'jtag frequency' command is executed.
+22:34:55 INFO  : Context for 'APU' is selected.
+22:34:55 INFO  : System reset is completed.
+22:34:58 INFO  : 'after 3000' command is executed.
+22:34:58 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B7A823A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B7A823A-13722093-0"}' command is executed.
+22:34:59 INFO  : Device configured successfully with "/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/_ide/bitstream/subsystem_db_wrapper.bit"
+22:34:59 INFO  : Context for 'APU' is selected.
+22:34:59 INFO  : Hardware design and registers information is loaded from '/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm/export/axi_timer_pwm/hw/subsystem_db_wrapper.xsa'.
+22:34:59 INFO  : 'configparams force-mem-access 1' command is executed.
+22:34:59 INFO  : Context for 'APU' is selected.
+22:34:59 INFO  : Sourcing of '/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/_ide/psinit/ps7_init.tcl' is done.
+22:35:00 INFO  : 'ps7_init' command is executed.
+22:35:00 INFO  : 'ps7_post_config' command is executed.
+22:35:00 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:35:00 INFO  : The application '/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/Debug/axi_timer_pwm_sw.elf' is downloaded to processor 'ps7_cortexa9_0'.
+22:35:00 INFO  : 'configparams force-mem-access 0' command is executed.
+22:35:00 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B7A823A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B7A823A-13722093-0"}
+fpga -file /home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/_ide/bitstream/subsystem_db_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw /home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm/export/axi_timer_pwm/hw/subsystem_db_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source /home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow /home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/Debug/axi_timer_pwm_sw.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+22:35:00 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:35:00 INFO  : 'con' command is executed.
+22:35:00 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+22:35:00 INFO  : Launch script is exported to file '/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw_system/_ide/scripts/systemdebugger_axi_timer_pwm_sw_system_standalone.tcl'
+22:39:19 INFO  : Checking for BSP changes to sync application flags for project 'axi_timer_pwm_sw'...
+22:39:33 INFO  : Disconnected from the channel tcfchan#8.
+22:39:34 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:39:34 INFO  : Jtag cable 'Digilent Zybo Z7 210351B7A823A' is selected.
+22:39:34 INFO  : 'jtag frequency' command is executed.
+22:39:34 INFO  : Context for 'APU' is selected.
+22:39:34 INFO  : System reset is completed.
+22:39:37 INFO  : 'after 3000' command is executed.
+22:39:37 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B7A823A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B7A823A-13722093-0"}' command is executed.
+22:39:38 INFO  : Device configured successfully with "/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/_ide/bitstream/subsystem_db_wrapper.bit"
+22:39:38 INFO  : Context for 'APU' is selected.
+22:39:38 INFO  : Hardware design and registers information is loaded from '/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm/export/axi_timer_pwm/hw/subsystem_db_wrapper.xsa'.
+22:39:38 INFO  : 'configparams force-mem-access 1' command is executed.
+22:39:38 INFO  : Context for 'APU' is selected.
+22:39:38 INFO  : Sourcing of '/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/_ide/psinit/ps7_init.tcl' is done.
+22:39:39 INFO  : 'ps7_init' command is executed.
+22:39:39 INFO  : 'ps7_post_config' command is executed.
+22:39:39 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:39:39 INFO  : The application '/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/Debug/axi_timer_pwm_sw.elf' is downloaded to processor 'ps7_cortexa9_0'.
+22:39:39 INFO  : 'configparams force-mem-access 0' command is executed.
+22:39:39 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B7A823A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B7A823A-13722093-0"}
+fpga -file /home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/_ide/bitstream/subsystem_db_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw /home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm/export/axi_timer_pwm/hw/subsystem_db_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source /home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow /home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/Debug/axi_timer_pwm_sw.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+22:39:39 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:39:39 INFO  : 'con' command is executed.
+22:39:39 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+22:39:39 INFO  : Launch script is exported to file '/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw_system/_ide/scripts/systemdebugger_axi_timer_pwm_sw_system_standalone.tcl'
+22:41:03 INFO  : Checking for BSP changes to sync application flags for project 'axi_timer_pwm_sw'...
+22:41:15 INFO  : Disconnected from the channel tcfchan#10.
+22:41:16 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:41:16 INFO  : Jtag cable 'Digilent Zybo Z7 210351B7A823A' is selected.
+22:41:16 INFO  : 'jtag frequency' command is executed.
+22:41:16 INFO  : Context for 'APU' is selected.
+22:41:16 INFO  : System reset is completed.
+22:41:19 INFO  : 'after 3000' command is executed.
+22:41:19 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B7A823A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B7A823A-13722093-0"}' command is executed.
+22:41:20 INFO  : Device configured successfully with "/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/_ide/bitstream/subsystem_db_wrapper.bit"
+22:41:20 INFO  : Context for 'APU' is selected.
+22:41:20 INFO  : Hardware design and registers information is loaded from '/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm/export/axi_timer_pwm/hw/subsystem_db_wrapper.xsa'.
+22:41:20 INFO  : 'configparams force-mem-access 1' command is executed.
+22:41:20 INFO  : Context for 'APU' is selected.
+22:41:20 INFO  : Sourcing of '/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/_ide/psinit/ps7_init.tcl' is done.
+22:41:21 INFO  : 'ps7_init' command is executed.
+22:41:21 INFO  : 'ps7_post_config' command is executed.
+22:41:21 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:41:21 INFO  : The application '/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/Debug/axi_timer_pwm_sw.elf' is downloaded to processor 'ps7_cortexa9_0'.
+22:41:21 INFO  : 'configparams force-mem-access 0' command is executed.
+22:41:21 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B7A823A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B7A823A-13722093-0"}
+fpga -file /home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/_ide/bitstream/subsystem_db_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw /home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm/export/axi_timer_pwm/hw/subsystem_db_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source /home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow /home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/Debug/axi_timer_pwm_sw.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+22:41:21 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:41:21 INFO  : 'con' command is executed.
+22:41:21 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+22:41:21 INFO  : Launch script is exported to file '/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw_system/_ide/scripts/systemdebugger_axi_timer_pwm_sw_system_standalone.tcl'
+22:45:33 INFO  : Disconnected from the channel tcfchan#12.
+22:45:53 DEBUG : Logs will be stored at '/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/IDE.log'.
+22:45:54 INFO  : Launching XSCT server: xsct -n  -interactive /home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/temp_xsdb_launch_script.tcl
+22:45:58 INFO  : XSCT server has started successfully.
+22:45:58 INFO  : plnx-install-location is set to ''
+22:45:58 INFO  : Successfully done setting XSCT server connection channel  
+22:45:58 INFO  : Successfully done setting workspace for the tool. 
+22:45:59 INFO  : Successfully done query RDI_DATADIR 
+22:45:59 INFO  : Registering command handlers for Vitis TCF services
+22:45:59 INFO  : Platform repository initialization has completed.
+22:46:35 INFO  : Checking for BSP changes to sync application flags for project 'axi_timer_pwm_sw'...
+22:46:48 INFO  : Checking for BSP changes to sync application flags for project 'axi_timer_pwm_sw'...
+22:46:52 ERROR : (XSDB Server)ERROR: [Hsi 55-1571] The design file /home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm/export/axi_timer_pwm/hw/subsystem_db_wrapper.xsa is already opened
+
+22:49:03 INFO  : Hardware specification for platform project 'axi_timer_pwm' is updated.
+22:49:12 INFO  : Result from executing command 'getProjects': axi_timer_pwm
+22:49:12 INFO  : Result from executing command 'getPlatforms': axi_timer_pwm|/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm/export/axi_timer_pwm/axi_timer_pwm.xpfm;xilinx_zcu102_base_202310_1|/home/mg/Xilinx/Vitis/2023.1/base_platforms/xilinx_zcu102_base_202310_1/xilinx_zcu102_base_202310_1.xpfm;xilinx_zcu102_base_dfx_202310_1|/home/mg/Xilinx/Vitis/2023.1/base_platforms/xilinx_zcu102_base_dfx_202310_1/xilinx_zcu102_base_dfx_202310_1.xpfm;xilinx_zcu104_base_202310_1|/home/mg/Xilinx/Vitis/2023.1/base_platforms/xilinx_zcu104_base_202310_1/xilinx_zcu104_base_202310_1.xpfm
+22:49:53 INFO  : Checking for BSP changes to sync application flags for project 'axi_timer_pwm_sw'...
+22:49:56 INFO  : Updating application flags with new BSP settings...
+22:49:56 INFO  : Successfully updated application flags for project axi_timer_pwm_sw.
+22:49:56 INFO  : The hardware specification used by project 'axi_timer_pwm_sw' is out of sync with the platform. Resource files extracted from the hardware specification will be updated.
+22:49:56 INFO  : The file '/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/_ide/bitstream/subsystem_db_wrapper.bit' stored in project is removed.
+22:49:56 INFO  : The updated bitstream files are copied from platform to folder '/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/_ide/bitstream' in project 'axi_timer_pwm_sw'.
+22:49:56 INFO  : The file '/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/_ide/psinit/ps7_init.tcl' stored in project is removed.
+22:50:03 INFO  : The updated ps init files are copied from platform to folder '/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/_ide/psinit' in project 'axi_timer_pwm_sw'.
+22:50:10 INFO  : Checking for BSP changes to sync application flags for project 'axi_timer_pwm_sw'...
+22:51:44 INFO  : Checking for BSP changes to sync application flags for project 'axi_timer_pwm_sw'...
+23:01:54 INFO  : Checking for BSP changes to sync application flags for project 'axi_timer_pwm_sw'...
+23:02:19 INFO  : XRT server has started successfully on port '4354'
+23:02:19 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:02:19 INFO  : Jtag cable 'Digilent Zybo Z7 210351B7A823A' is selected.
+23:02:19 INFO  : 'jtag frequency' command is executed.
+23:02:20 INFO  : Context for 'APU' is selected.
+23:02:20 INFO  : System reset is completed.
+23:02:23 INFO  : 'after 3000' command is executed.
+23:02:23 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B7A823A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B7A823A-13722093-0"}' command is executed.
+23:02:24 INFO  : Device configured successfully with "/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/_ide/bitstream/subsystem_db_wrapper.bit"
+23:02:24 INFO  : Context for 'APU' is selected.
+23:02:24 INFO  : Hardware design and registers information is loaded from '/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm/export/axi_timer_pwm/hw/subsystem_db_wrapper.xsa'.
+23:02:24 INFO  : 'configparams force-mem-access 1' command is executed.
+23:02:24 INFO  : Context for 'APU' is selected.
+23:02:24 INFO  : Sourcing of '/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/_ide/psinit/ps7_init.tcl' is done.
+23:02:24 INFO  : 'ps7_init' command is executed.
+23:02:24 INFO  : 'ps7_post_config' command is executed.
+23:02:24 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:02:24 INFO  : The application '/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/Debug/axi_timer_pwm_sw.elf' is downloaded to processor 'ps7_cortexa9_0'.
+23:02:24 INFO  : 'configparams force-mem-access 0' command is executed.
+23:02:24 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B7A823A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B7A823A-13722093-0"}
+fpga -file /home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/_ide/bitstream/subsystem_db_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw /home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm/export/axi_timer_pwm/hw/subsystem_db_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source /home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow /home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/Debug/axi_timer_pwm_sw.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+23:02:25 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:02:25 INFO  : 'con' command is executed.
+23:02:25 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+23:02:25 INFO  : Launch script is exported to file '/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw_system/_ide/scripts/systemdebugger_axi_timer_pwm_sw_system_standalone.tcl'
+23:05:13 INFO  : Disconnected from the channel tcfchan#6.
+23:05:14 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:05:14 INFO  : Jtag cable 'Digilent Zybo Z7 210351B7A823A' is selected.
+23:05:14 INFO  : 'jtag frequency' command is executed.
+23:05:14 INFO  : Context for 'APU' is selected.
+23:05:14 INFO  : System reset is completed.
+23:05:17 INFO  : 'after 3000' command is executed.
+23:05:17 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B7A823A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B7A823A-13722093-0"}' command is executed.
+23:05:18 INFO  : Device configured successfully with "/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/_ide/bitstream/subsystem_db_wrapper.bit"
+23:05:18 INFO  : Context for 'APU' is selected.
+23:05:18 INFO  : Hardware design and registers information is loaded from '/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm/export/axi_timer_pwm/hw/subsystem_db_wrapper.xsa'.
+23:05:18 INFO  : 'configparams force-mem-access 1' command is executed.
+23:05:18 INFO  : Context for 'APU' is selected.
+23:05:18 INFO  : Sourcing of '/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/_ide/psinit/ps7_init.tcl' is done.
+23:05:18 INFO  : 'ps7_init' command is executed.
+23:05:18 INFO  : 'ps7_post_config' command is executed.
+23:05:18 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:05:19 INFO  : The application '/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/Debug/axi_timer_pwm_sw.elf' is downloaded to processor 'ps7_cortexa9_0'.
+23:05:19 INFO  : 'configparams force-mem-access 0' command is executed.
+23:05:19 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B7A823A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B7A823A-13722093-0"}
+fpga -file /home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/_ide/bitstream/subsystem_db_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw /home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm/export/axi_timer_pwm/hw/subsystem_db_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source /home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow /home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/Debug/axi_timer_pwm_sw.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+23:05:19 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:05:19 INFO  : 'con' command is executed.
+23:05:19 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+23:05:19 INFO  : Launch script is exported to file '/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw_system/_ide/scripts/systemdebugger_axi_timer_pwm_sw_system_standalone.tcl'
+23:06:28 INFO  : Checking for BSP changes to sync application flags for project 'axi_timer_pwm_sw'...
+23:06:42 INFO  : Disconnected from the channel tcfchan#7.
+23:06:43 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:06:43 INFO  : Jtag cable 'Digilent Zybo Z7 210351B7A823A' is selected.
+23:06:43 INFO  : 'jtag frequency' command is executed.
+23:06:43 INFO  : Context for 'APU' is selected.
+23:06:43 INFO  : System reset is completed.
+23:06:46 INFO  : 'after 3000' command is executed.
+23:06:46 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B7A823A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B7A823A-13722093-0"}' command is executed.
+23:06:47 INFO  : Device configured successfully with "/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/_ide/bitstream/subsystem_db_wrapper.bit"
+23:06:47 INFO  : Context for 'APU' is selected.
+23:06:47 INFO  : Hardware design and registers information is loaded from '/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm/export/axi_timer_pwm/hw/subsystem_db_wrapper.xsa'.
+23:06:47 INFO  : 'configparams force-mem-access 1' command is executed.
+23:06:47 INFO  : Context for 'APU' is selected.
+23:06:47 INFO  : Sourcing of '/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/_ide/psinit/ps7_init.tcl' is done.
+23:06:47 INFO  : 'ps7_init' command is executed.
+23:06:47 INFO  : 'ps7_post_config' command is executed.
+23:06:47 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:06:48 INFO  : The application '/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/Debug/axi_timer_pwm_sw.elf' is downloaded to processor 'ps7_cortexa9_0'.
+23:06:48 INFO  : 'configparams force-mem-access 0' command is executed.
+23:06:48 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B7A823A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B7A823A-13722093-0"}
+fpga -file /home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/_ide/bitstream/subsystem_db_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw /home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm/export/axi_timer_pwm/hw/subsystem_db_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source /home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow /home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/Debug/axi_timer_pwm_sw.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+23:06:48 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:06:48 INFO  : 'con' command is executed.
+23:06:48 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+23:06:48 INFO  : Launch script is exported to file '/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw_system/_ide/scripts/systemdebugger_axi_timer_pwm_sw_system_standalone.tcl'
+23:07:37 INFO  : Checking for BSP changes to sync application flags for project 'axi_timer_pwm_sw'...
+23:08:36 INFO  : Disconnected from the channel tcfchan#9.
+23:08:37 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:08:38 INFO  : Jtag cable 'Digilent Zybo Z7 210351B7A823A' is selected.
+23:08:38 INFO  : 'jtag frequency' command is executed.
+23:08:38 INFO  : Context for 'APU' is selected.
+23:08:38 INFO  : System reset is completed.
+23:08:41 INFO  : 'after 3000' command is executed.
+23:08:41 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B7A823A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B7A823A-13722093-0"}' command is executed.
+23:08:42 INFO  : Device configured successfully with "/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/_ide/bitstream/subsystem_db_wrapper.bit"
+23:08:42 INFO  : Context for 'APU' is selected.
+23:08:42 INFO  : Hardware design and registers information is loaded from '/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm/export/axi_timer_pwm/hw/subsystem_db_wrapper.xsa'.
+23:08:42 INFO  : 'configparams force-mem-access 1' command is executed.
+23:08:42 INFO  : Context for 'APU' is selected.
+23:08:42 INFO  : Sourcing of '/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/_ide/psinit/ps7_init.tcl' is done.
+23:08:42 INFO  : 'ps7_init' command is executed.
+23:08:42 INFO  : 'ps7_post_config' command is executed.
+23:08:42 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:08:42 INFO  : The application '/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/Debug/axi_timer_pwm_sw.elf' is downloaded to processor 'ps7_cortexa9_0'.
+23:08:42 INFO  : 'configparams force-mem-access 0' command is executed.
+23:08:42 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B7A823A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B7A823A-13722093-0"}
+fpga -file /home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/_ide/bitstream/subsystem_db_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw /home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm/export/axi_timer_pwm/hw/subsystem_db_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source /home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow /home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/Debug/axi_timer_pwm_sw.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+23:08:42 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:08:42 INFO  : 'con' command is executed.
+23:08:42 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+23:08:42 INFO  : Launch script is exported to file '/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw_system/_ide/scripts/systemdebugger_axi_timer_pwm_sw_system_standalone.tcl'
+23:10:38 INFO  : Checking for BSP changes to sync application flags for project 'axi_timer_pwm_sw'...
+23:10:59 INFO  : Disconnected from the channel tcfchan#11.
+23:11:00 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:11:00 INFO  : Jtag cable 'Digilent Zybo Z7 210351B7A823A' is selected.
+23:11:00 INFO  : 'jtag frequency' command is executed.
+23:11:00 INFO  : Context for 'APU' is selected.
+23:11:00 INFO  : System reset is completed.
+23:11:03 INFO  : 'after 3000' command is executed.
+23:11:03 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B7A823A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B7A823A-13722093-0"}' command is executed.
+23:11:04 INFO  : Device configured successfully with "/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/_ide/bitstream/subsystem_db_wrapper.bit"
+23:11:04 INFO  : Context for 'APU' is selected.
+23:11:04 INFO  : Hardware design and registers information is loaded from '/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm/export/axi_timer_pwm/hw/subsystem_db_wrapper.xsa'.
+23:11:04 INFO  : 'configparams force-mem-access 1' command is executed.
+23:11:04 INFO  : Context for 'APU' is selected.
+23:11:04 INFO  : Sourcing of '/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/_ide/psinit/ps7_init.tcl' is done.
+23:11:04 INFO  : 'ps7_init' command is executed.
+23:11:04 INFO  : 'ps7_post_config' command is executed.
+23:11:04 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:11:04 INFO  : The application '/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/Debug/axi_timer_pwm_sw.elf' is downloaded to processor 'ps7_cortexa9_0'.
+23:11:04 INFO  : 'configparams force-mem-access 0' command is executed.
+23:11:04 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B7A823A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B7A823A-13722093-0"}
+fpga -file /home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/_ide/bitstream/subsystem_db_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw /home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm/export/axi_timer_pwm/hw/subsystem_db_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source /home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow /home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/Debug/axi_timer_pwm_sw.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+23:11:04 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:11:05 INFO  : 'con' command is executed.
+23:11:05 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+23:11:05 INFO  : Launch script is exported to file '/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw_system/_ide/scripts/systemdebugger_axi_timer_pwm_sw_system_standalone.tcl'
+23:11:51 INFO  : Disconnected from the channel tcfchan#13.
+23:11:51 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:11:52 INFO  : Jtag cable 'Digilent Zybo Z7 210351B7A823A' is selected.
+23:11:52 INFO  : 'jtag frequency' command is executed.
+23:11:52 INFO  : Context for 'APU' is selected.
+23:11:52 INFO  : System reset is completed.
+23:11:55 INFO  : 'after 3000' command is executed.
+23:11:55 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B7A823A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B7A823A-13722093-0"}' command is executed.
+23:11:56 INFO  : Device configured successfully with "/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/_ide/bitstream/subsystem_db_wrapper.bit"
+23:11:56 INFO  : Context for 'APU' is selected.
+23:11:56 INFO  : Hardware design and registers information is loaded from '/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm/export/axi_timer_pwm/hw/subsystem_db_wrapper.xsa'.
+23:11:56 INFO  : 'configparams force-mem-access 1' command is executed.
+23:11:56 INFO  : Context for 'APU' is selected.
+23:11:56 INFO  : Sourcing of '/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/_ide/psinit/ps7_init.tcl' is done.
+23:11:56 INFO  : 'ps7_init' command is executed.
+23:11:56 INFO  : 'ps7_post_config' command is executed.
+23:11:56 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:11:56 INFO  : The application '/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/Debug/axi_timer_pwm_sw.elf' is downloaded to processor 'ps7_cortexa9_0'.
+23:11:56 INFO  : 'configparams force-mem-access 0' command is executed.
+23:11:56 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B7A823A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B7A823A-13722093-0"}
+fpga -file /home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/_ide/bitstream/subsystem_db_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw /home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm/export/axi_timer_pwm/hw/subsystem_db_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source /home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow /home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/Debug/axi_timer_pwm_sw.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+23:11:56 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:11:56 INFO  : 'con' command is executed.
+23:11:56 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+23:11:56 INFO  : Launch script is exported to file '/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw_system/_ide/scripts/systemdebugger_axi_timer_pwm_sw_system_standalone.tcl'
+23:13:42 INFO  : Disconnected from the channel tcfchan#14.
+23:13:42 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:13:42 INFO  : Jtag cable 'Digilent Zybo Z7 210351B7A823A' is selected.
+23:13:42 INFO  : 'jtag frequency' command is executed.
+23:13:42 INFO  : Context for 'APU' is selected.
+23:13:42 INFO  : System reset is completed.
+23:13:45 INFO  : 'after 3000' command is executed.
+23:13:45 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B7A823A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B7A823A-13722093-0"}' command is executed.
+23:13:46 INFO  : Device configured successfully with "/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/_ide/bitstream/subsystem_db_wrapper.bit"
+23:13:46 INFO  : Context for 'APU' is selected.
+23:13:46 INFO  : Hardware design and registers information is loaded from '/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm/export/axi_timer_pwm/hw/subsystem_db_wrapper.xsa'.
+23:13:46 INFO  : 'configparams force-mem-access 1' command is executed.
+23:13:46 INFO  : Context for 'APU' is selected.
+23:13:46 INFO  : Sourcing of '/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/_ide/psinit/ps7_init.tcl' is done.
+23:13:47 INFO  : 'ps7_init' command is executed.
+23:13:47 INFO  : 'ps7_post_config' command is executed.
+23:13:47 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:13:47 INFO  : The application '/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/Debug/axi_timer_pwm_sw.elf' is downloaded to processor 'ps7_cortexa9_0'.
+23:13:47 INFO  : 'configparams force-mem-access 0' command is executed.
+23:13:47 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B7A823A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B7A823A-13722093-0"}
+fpga -file /home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/_ide/bitstream/subsystem_db_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw /home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm/export/axi_timer_pwm/hw/subsystem_db_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source /home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow /home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/Debug/axi_timer_pwm_sw.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+23:13:47 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:13:47 INFO  : 'con' command is executed.
+23:13:47 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+23:13:47 INFO  : Launch script is exported to file '/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw_system/_ide/scripts/systemdebugger_axi_timer_pwm_sw_system_standalone.tcl'
+23:14:33 INFO  : Disconnected from the channel tcfchan#15.
+23:14:34 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:14:34 INFO  : Jtag cable 'Digilent Zybo Z7 210351B7A823A' is selected.
+23:14:34 INFO  : 'jtag frequency' command is executed.
+23:14:34 INFO  : Context for 'APU' is selected.
+23:14:34 INFO  : System reset is completed.
+23:14:37 INFO  : 'after 3000' command is executed.
+23:14:37 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B7A823A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B7A823A-13722093-0"}' command is executed.
+23:14:38 INFO  : Device configured successfully with "/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/_ide/bitstream/subsystem_db_wrapper.bit"
+23:14:38 INFO  : Context for 'APU' is selected.
+23:14:38 INFO  : Hardware design and registers information is loaded from '/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm/export/axi_timer_pwm/hw/subsystem_db_wrapper.xsa'.
+23:14:38 INFO  : 'configparams force-mem-access 1' command is executed.
+23:14:38 INFO  : Context for 'APU' is selected.
+23:14:38 INFO  : Sourcing of '/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/_ide/psinit/ps7_init.tcl' is done.
+23:14:38 INFO  : 'ps7_init' command is executed.
+23:14:38 INFO  : 'ps7_post_config' command is executed.
+23:14:38 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:14:38 INFO  : The application '/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/Debug/axi_timer_pwm_sw.elf' is downloaded to processor 'ps7_cortexa9_0'.
+23:14:38 INFO  : 'configparams force-mem-access 0' command is executed.
+23:14:38 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B7A823A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B7A823A-13722093-0"}
+fpga -file /home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/_ide/bitstream/subsystem_db_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw /home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm/export/axi_timer_pwm/hw/subsystem_db_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source /home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow /home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/Debug/axi_timer_pwm_sw.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+23:14:38 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:14:38 INFO  : 'con' command is executed.
+23:14:38 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+23:14:38 INFO  : Launch script is exported to file '/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw_system/_ide/scripts/systemdebugger_axi_timer_pwm_sw_system_standalone.tcl'
+23:15:27 INFO  : Checking for BSP changes to sync application flags for project 'axi_timer_pwm_sw'...
+23:15:46 INFO  : Checking for BSP changes to sync application flags for project 'axi_timer_pwm_sw'...
+23:15:58 INFO  : Disconnected from the channel tcfchan#16.
+23:15:58 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:15:59 INFO  : Jtag cable 'Digilent Zybo Z7 210351B7A823A' is selected.
+23:15:59 INFO  : 'jtag frequency' command is executed.
+23:15:59 INFO  : Context for 'APU' is selected.
+23:15:59 INFO  : System reset is completed.
+23:16:02 INFO  : 'after 3000' command is executed.
+23:16:02 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B7A823A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B7A823A-13722093-0"}' command is executed.
+23:16:03 INFO  : Device configured successfully with "/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/_ide/bitstream/subsystem_db_wrapper.bit"
+23:16:03 INFO  : Context for 'APU' is selected.
+23:16:03 INFO  : Hardware design and registers information is loaded from '/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm/export/axi_timer_pwm/hw/subsystem_db_wrapper.xsa'.
+23:16:03 INFO  : 'configparams force-mem-access 1' command is executed.
+23:16:03 INFO  : Context for 'APU' is selected.
+23:16:03 INFO  : Sourcing of '/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/_ide/psinit/ps7_init.tcl' is done.
+23:16:03 INFO  : 'ps7_init' command is executed.
+23:16:03 INFO  : 'ps7_post_config' command is executed.
+23:16:03 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:16:03 INFO  : The application '/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/Debug/axi_timer_pwm_sw.elf' is downloaded to processor 'ps7_cortexa9_0'.
+23:16:03 INFO  : 'configparams force-mem-access 0' command is executed.
+23:16:03 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B7A823A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B7A823A-13722093-0"}
+fpga -file /home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/_ide/bitstream/subsystem_db_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw /home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm/export/axi_timer_pwm/hw/subsystem_db_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source /home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow /home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/Debug/axi_timer_pwm_sw.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+23:16:03 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:16:03 INFO  : 'con' command is executed.
+23:16:03 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+23:16:03 INFO  : Launch script is exported to file '/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw_system/_ide/scripts/systemdebugger_axi_timer_pwm_sw_system_standalone.tcl'
+23:16:57 INFO  : Checking for BSP changes to sync application flags for project 'axi_timer_pwm_sw'...
+23:17:32 INFO  : Checking for BSP changes to sync application flags for project 'axi_timer_pwm_sw'...
+23:17:42 INFO  : Checking for BSP changes to sync application flags for project 'axi_timer_pwm_sw'...
+23:17:51 INFO  : Disconnected from the channel tcfchan#19.
+23:17:51 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:17:52 INFO  : Jtag cable 'Digilent Zybo Z7 210351B7A823A' is selected.
+23:17:52 INFO  : 'jtag frequency' command is executed.
+23:17:52 INFO  : Context for 'APU' is selected.
+23:17:52 INFO  : System reset is completed.
+23:17:55 INFO  : 'after 3000' command is executed.
+23:17:55 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B7A823A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B7A823A-13722093-0"}' command is executed.
+23:17:56 INFO  : Device configured successfully with "/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/_ide/bitstream/subsystem_db_wrapper.bit"
+23:17:56 INFO  : Context for 'APU' is selected.
+23:17:56 INFO  : Hardware design and registers information is loaded from '/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm/export/axi_timer_pwm/hw/subsystem_db_wrapper.xsa'.
+23:17:56 INFO  : 'configparams force-mem-access 1' command is executed.
+23:17:56 INFO  : Context for 'APU' is selected.
+23:17:56 INFO  : Sourcing of '/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/_ide/psinit/ps7_init.tcl' is done.
+23:17:56 INFO  : 'ps7_init' command is executed.
+23:17:56 INFO  : 'ps7_post_config' command is executed.
+23:17:56 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:17:56 INFO  : The application '/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/Debug/axi_timer_pwm_sw.elf' is downloaded to processor 'ps7_cortexa9_0'.
+23:17:56 INFO  : 'configparams force-mem-access 0' command is executed.
+23:17:56 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B7A823A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B7A823A-13722093-0"}
+fpga -file /home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/_ide/bitstream/subsystem_db_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw /home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm/export/axi_timer_pwm/hw/subsystem_db_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source /home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow /home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/Debug/axi_timer_pwm_sw.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+23:17:56 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:17:56 INFO  : 'con' command is executed.
+23:17:56 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+23:17:56 INFO  : Launch script is exported to file '/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw_system/_ide/scripts/systemdebugger_axi_timer_pwm_sw_system_standalone.tcl'
+23:18:47 INFO  : Disconnected from the channel tcfchan#22.
+23:18:48 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:18:49 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+----------------End of Script----------------
+
+23:18:49 ERROR : Could not find FPGA device on the board for connection 'Local'.
+
+
+Troubleshooting hints:
+1. Check whether board is connected to system properly.
+2. In case of zynq board, check whether Digilent/Xilinx cable switch settings are correct.
+3. If you are using Xilinx Platform Cable USB, ensure that status LED is green.
+23:19:17 DEBUG : Logs will be stored at '/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/IDE.log'.
+23:19:17 INFO  : Launching XSCT server: xsct -n  -interactive /home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/temp_xsdb_launch_script.tcl
+23:19:19 INFO  : XSCT server has started successfully.
+23:19:19 INFO  : Successfully done setting XSCT server connection channel  
+23:19:19 INFO  : plnx-install-location is set to ''
+23:19:19 INFO  : Successfully done setting workspace for the tool. 
+23:19:20 INFO  : Successfully done query RDI_DATADIR 
+23:19:20 INFO  : Platform repository initialization has completed.
+23:19:20 INFO  : Registering command handlers for Vitis TCF services
+23:19:26 INFO  : Checking for BSP changes to sync application flags for project 'axi_timer_pwm_sw'...
+23:19:30 ERROR : (XSDB Server)ERROR: [Hsi 55-1571] The design file /home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm/export/axi_timer_pwm/hw/subsystem_db_wrapper.xsa is already opened
+
+23:19:49 INFO  : XRT server has started successfully on port '4353'
+23:19:49 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:19:49 INFO  : Jtag cable 'Digilent Zybo Z7 210351B7A823A' is selected.
+23:19:49 INFO  : 'jtag frequency' command is executed.
+23:19:49 INFO  : Context for 'APU' is selected.
+23:19:49 INFO  : System reset is completed.
+23:19:52 INFO  : 'after 3000' command is executed.
+23:19:53 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B7A823A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B7A823A-13722093-0"}' command is executed.
+23:19:54 INFO  : Device configured successfully with "/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/_ide/bitstream/subsystem_db_wrapper.bit"
+23:19:54 INFO  : Context for 'APU' is selected.
+23:19:54 INFO  : Hardware design and registers information is loaded from '/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm/export/axi_timer_pwm/hw/subsystem_db_wrapper.xsa'.
+23:19:54 INFO  : 'configparams force-mem-access 1' command is executed.
+23:19:54 INFO  : Context for 'APU' is selected.
+23:19:54 INFO  : Sourcing of '/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/_ide/psinit/ps7_init.tcl' is done.
+23:19:54 INFO  : 'ps7_init' command is executed.
+23:19:54 INFO  : 'ps7_post_config' command is executed.
+23:19:54 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:19:54 INFO  : The application '/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/Debug/axi_timer_pwm_sw.elf' is downloaded to processor 'ps7_cortexa9_0'.
+23:19:54 INFO  : 'configparams force-mem-access 0' command is executed.
+23:19:54 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B7A823A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B7A823A-13722093-0"}
+fpga -file /home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/_ide/bitstream/subsystem_db_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw /home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm/export/axi_timer_pwm/hw/subsystem_db_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source /home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow /home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/Debug/axi_timer_pwm_sw.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+23:19:54 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:19:54 INFO  : 'con' command is executed.
+23:19:54 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+23:19:54 INFO  : Launch script is exported to file '/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw_system/_ide/scripts/systemdebugger_axi_timer_pwm_sw_system_standalone.tcl'
+23:22:01 INFO  : Checking for BSP changes to sync application flags for project 'axi_timer_pwm_sw'...
+23:22:03 ERROR : (XSDB Server)ERROR: [Hsi 55-1571] The design file /home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm/export/axi_timer_pwm/hw/subsystem_db_wrapper.xsa is already opened
+
+23:22:24 INFO  : Disconnected from the channel tcfchan#2.
+23:22:25 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:22:34 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+----------------End of Script----------------
+
+23:22:34 ERROR : Could not find FPGA device on the board for connection 'Local'.
+
+
+Troubleshooting hints:
+1. Check whether board is connected to system properly.
+2. In case of zynq board, check whether Digilent/Xilinx cable switch settings are correct.
+3. If you are using Xilinx Platform Cable USB, ensure that status LED is green.
+23:22:46 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:22:46 INFO  : Jtag cable 'Digilent Zybo Z7 210351B7A823A' is selected.
+23:22:46 INFO  : 'jtag frequency' command is executed.
+23:22:46 INFO  : Context for 'APU' is selected.
+23:22:46 INFO  : System reset is completed.
+23:22:49 INFO  : 'after 3000' command is executed.
+23:22:49 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B7A823A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B7A823A-13722093-0"}' command is executed.
+23:22:50 INFO  : Device configured successfully with "/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/_ide/bitstream/subsystem_db_wrapper.bit"
+23:22:50 INFO  : Context for 'APU' is selected.
+23:22:52 INFO  : Hardware design and registers information is loaded from '/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm/export/axi_timer_pwm/hw/subsystem_db_wrapper.xsa'.
+23:22:52 INFO  : 'configparams force-mem-access 1' command is executed.
+23:22:52 INFO  : Context for 'APU' is selected.
+23:22:52 INFO  : Sourcing of '/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/_ide/psinit/ps7_init.tcl' is done.
+23:22:52 INFO  : 'ps7_init' command is executed.
+23:22:52 INFO  : 'ps7_post_config' command is executed.
+23:22:52 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:22:52 INFO  : The application '/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/Debug/axi_timer_pwm_sw.elf' is downloaded to processor 'ps7_cortexa9_0'.
+23:22:52 INFO  : 'configparams force-mem-access 0' command is executed.
+23:22:52 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B7A823A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B7A823A-13722093-0"}
+fpga -file /home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/_ide/bitstream/subsystem_db_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw /home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm/export/axi_timer_pwm/hw/subsystem_db_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source /home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow /home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/Debug/axi_timer_pwm_sw.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+23:22:52 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:22:52 INFO  : 'con' command is executed.
+23:22:52 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+23:22:52 INFO  : Launch script is exported to file '/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw_system/_ide/scripts/systemdebugger_axi_timer_pwm_sw_system_standalone.tcl'
+23:23:40 INFO  : Disconnected from the channel tcfchan#4.
+23:23:40 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:23:40 INFO  : Jtag cable 'Digilent Zybo Z7 210351B7A823A' is selected.
+23:23:40 INFO  : 'jtag frequency' command is executed.
+23:23:40 INFO  : Context for 'APU' is selected.
+23:23:40 INFO  : System reset is completed.
+23:23:43 INFO  : 'after 3000' command is executed.
+23:23:43 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B7A823A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B7A823A-13722093-0"}' command is executed.
+23:23:44 INFO  : Device configured successfully with "/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/_ide/bitstream/subsystem_db_wrapper.bit"
+23:23:44 INFO  : Context for 'APU' is selected.
+23:23:46 INFO  : Hardware design and registers information is loaded from '/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm/export/axi_timer_pwm/hw/subsystem_db_wrapper.xsa'.
+23:23:46 INFO  : 'configparams force-mem-access 1' command is executed.
+23:23:46 INFO  : Context for 'APU' is selected.
+23:23:46 INFO  : Sourcing of '/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/_ide/psinit/ps7_init.tcl' is done.
+23:23:46 INFO  : 'ps7_init' command is executed.
+23:23:46 INFO  : 'ps7_post_config' command is executed.
+23:23:46 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:23:46 INFO  : The application '/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/Debug/axi_timer_pwm_sw.elf' is downloaded to processor 'ps7_cortexa9_0'.
+23:23:46 INFO  : 'configparams force-mem-access 0' command is executed.
+23:23:46 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B7A823A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B7A823A-13722093-0"}
+fpga -file /home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/_ide/bitstream/subsystem_db_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw /home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm/export/axi_timer_pwm/hw/subsystem_db_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source /home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow /home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/Debug/axi_timer_pwm_sw.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+23:23:46 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:23:46 INFO  : 'con' command is executed.
+23:23:46 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+23:23:46 INFO  : Launch script is exported to file '/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw_system/_ide/scripts/systemdebugger_axi_timer_pwm_sw_system_standalone.tcl'
+23:28:00 INFO  : Disconnected from the channel tcfchan#5.
+23:28:01 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:28:01 INFO  : Jtag cable 'Digilent Zybo Z7 210351B7A823A' is selected.
+23:28:01 INFO  : 'jtag frequency' command is executed.
+23:28:01 INFO  : Context for 'APU' is selected.
+23:28:01 INFO  : System reset is completed.
+23:28:04 INFO  : 'after 3000' command is executed.
+23:28:05 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B7A823A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B7A823A-13722093-0"}' command is executed.
+23:28:06 INFO  : Device configured successfully with "/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/_ide/bitstream/subsystem_db_wrapper.bit"
+23:28:06 INFO  : Context for 'APU' is selected.
+23:28:07 INFO  : Hardware design and registers information is loaded from '/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm/export/axi_timer_pwm/hw/subsystem_db_wrapper.xsa'.
+23:28:07 INFO  : 'configparams force-mem-access 1' command is executed.
+23:28:07 INFO  : Context for 'APU' is selected.
+23:28:07 INFO  : Sourcing of '/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/_ide/psinit/ps7_init.tcl' is done.
+23:28:08 INFO  : 'ps7_init' command is executed.
+23:28:08 INFO  : 'ps7_post_config' command is executed.
+23:28:08 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:28:08 INFO  : The application '/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/Debug/axi_timer_pwm_sw.elf' is downloaded to processor 'ps7_cortexa9_0'.
+23:28:08 INFO  : 'configparams force-mem-access 0' command is executed.
+23:28:08 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B7A823A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B7A823A-13722093-0"}
+fpga -file /home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/_ide/bitstream/subsystem_db_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw /home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm/export/axi_timer_pwm/hw/subsystem_db_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source /home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow /home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/Debug/axi_timer_pwm_sw.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+23:28:08 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:28:08 INFO  : 'con' command is executed.
+23:28:08 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+23:28:08 INFO  : Launch script is exported to file '/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw_system/_ide/scripts/systemdebugger_axi_timer_pwm_sw_system_standalone.tcl'
+23:33:16 INFO  : Result from executing command 'getProjects': axi_timer_pwm
+23:33:16 INFO  : Result from executing command 'getPlatforms': axi_timer_pwm|/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm/export/axi_timer_pwm/axi_timer_pwm.xpfm;xilinx_zcu102_base_202310_1|/home/mg/Xilinx/Vitis/2023.1/base_platforms/xilinx_zcu102_base_202310_1/xilinx_zcu102_base_202310_1.xpfm;xilinx_zcu102_base_dfx_202310_1|/home/mg/Xilinx/Vitis/2023.1/base_platforms/xilinx_zcu102_base_dfx_202310_1/xilinx_zcu102_base_dfx_202310_1.xpfm;xilinx_zcu104_base_202310_1|/home/mg/Xilinx/Vitis/2023.1/base_platforms/xilinx_zcu104_base_202310_1/xilinx_zcu104_base_202310_1.xpfm
+23:33:20 INFO  : Checking for BSP changes to sync application flags for project 'axi_timer_pwm_sw'...
+23:33:51 INFO  : Disconnected from the channel tcfchan#6.
+23:33:52 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:34:01 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+----------------End of Script----------------
+
+23:34:01 ERROR : Could not find ARM device on the board for connection 'Local'.
+Check if the target is in:
+1. Split JTAG - No operations are possible with ARM DAP.
+2. Non JTAG bootmode - Bootrom may need time to enable DAP.
+Please try again.
+
+
+Troubleshooting hints:
+1. Check whether board is connected to system properly.
+2. In case of zynq board, check whether Digilent/Xilinx cable switch settings are correct.
+3. If you are using Xilinx Platform Cable USB, ensure that status LED is green.
+23:34:12 INFO  : Checking for BSP changes to sync application flags for project 'axi_timer_pwm_sw'...
+23:34:25 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:34:25 INFO  : Jtag cable 'Digilent Zybo Z7 210351B7A823A' is selected.
+23:34:25 INFO  : 'jtag frequency' command is executed.
+23:34:25 INFO  : Context for 'APU' is selected.
+23:34:25 INFO  : System reset is completed.
+23:34:28 INFO  : 'after 3000' command is executed.
+23:34:28 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B7A823A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B7A823A-13722093-0"}' command is executed.
+23:34:29 INFO  : Device configured successfully with "/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/_ide/bitstream/subsystem_db_wrapper.bit"
+23:34:29 INFO  : Context for 'APU' is selected.
+23:34:29 INFO  : Hardware design and registers information is loaded from '/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm/export/axi_timer_pwm/hw/subsystem_db_wrapper.xsa'.
+23:34:29 INFO  : 'configparams force-mem-access 1' command is executed.
+23:34:29 INFO  : Context for 'APU' is selected.
+23:34:29 INFO  : Sourcing of '/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/_ide/psinit/ps7_init.tcl' is done.
+23:34:29 INFO  : 'ps7_init' command is executed.
+23:34:29 INFO  : 'ps7_post_config' command is executed.
+23:34:29 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:34:30 INFO  : The application '/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/Debug/axi_timer_pwm_sw.elf' is downloaded to processor 'ps7_cortexa9_0'.
+23:34:30 INFO  : 'configparams force-mem-access 0' command is executed.
+23:34:30 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B7A823A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B7A823A-13722093-0"}
+fpga -file /home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/_ide/bitstream/subsystem_db_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw /home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm/export/axi_timer_pwm/hw/subsystem_db_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source /home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow /home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/Debug/axi_timer_pwm_sw.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+23:34:30 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:34:30 INFO  : 'con' command is executed.
+23:34:30 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+23:34:30 INFO  : Launch script is exported to file '/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw_system/_ide/scripts/systemdebugger_axi_timer_pwm_sw_system_standalone.tcl'
+23:44:59 INFO  : Checking for BSP changes to sync application flags for project 'axi_timer_pwm_sw'...
+23:45:10 INFO  : Checking for BSP changes to sync application flags for project 'axi_timer_pwm_sw'...
+23:45:29 INFO  : Checking for BSP changes to sync application flags for project 'axi_timer_pwm_sw'...
+23:45:49 INFO  : Disconnected from the channel tcfchan#8.
+23:45:49 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:45:49 INFO  : Jtag cable 'Digilent Zybo Z7 210351B7A823A' is selected.
+23:45:49 INFO  : 'jtag frequency' command is executed.
+23:45:49 INFO  : Context for 'APU' is selected.
+23:45:49 INFO  : System reset is completed.
+23:45:52 INFO  : 'after 3000' command is executed.
+23:45:52 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B7A823A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B7A823A-13722093-0"}' command is executed.
+23:45:53 INFO  : Device configured successfully with "/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/_ide/bitstream/subsystem_db_wrapper.bit"
+23:45:53 INFO  : Context for 'APU' is selected.
+23:45:53 INFO  : Hardware design and registers information is loaded from '/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm/export/axi_timer_pwm/hw/subsystem_db_wrapper.xsa'.
+23:45:53 INFO  : 'configparams force-mem-access 1' command is executed.
+23:45:53 INFO  : Context for 'APU' is selected.
+23:45:53 INFO  : Sourcing of '/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/_ide/psinit/ps7_init.tcl' is done.
+23:45:54 INFO  : 'ps7_init' command is executed.
+23:45:54 INFO  : 'ps7_post_config' command is executed.
+23:45:54 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:45:54 INFO  : The application '/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/Debug/axi_timer_pwm_sw.elf' is downloaded to processor 'ps7_cortexa9_0'.
+23:45:54 INFO  : 'configparams force-mem-access 0' command is executed.
+23:45:54 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B7A823A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B7A823A-13722093-0"}
+fpga -file /home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/_ide/bitstream/subsystem_db_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw /home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm/export/axi_timer_pwm/hw/subsystem_db_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source /home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow /home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/Debug/axi_timer_pwm_sw.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+23:45:54 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:45:54 INFO  : 'con' command is executed.
+23:45:54 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+23:45:54 INFO  : Launch script is exported to file '/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw_system/_ide/scripts/systemdebugger_axi_timer_pwm_sw_system_standalone.tcl'
+23:52:07 INFO  : Checking for BSP changes to sync application flags for project 'axi_timer_pwm_sw'...
+23:52:42 INFO  : Checking for BSP changes to sync application flags for project 'axi_timer_pwm_sw'...
+23:52:45 INFO  : Checking for BSP changes to sync application flags for project 'axi_timer_pwm_sw'...
+23:52:58 INFO  : Checking for BSP changes to sync application flags for project 'axi_timer_pwm_sw'...
+23:53:31 INFO  : Disconnected from the channel tcfchan#12.
+23:53:31 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:53:31 INFO  : Jtag cable 'Digilent Zybo Z7 210351B7A823A' is selected.
+23:53:31 INFO  : 'jtag frequency' command is executed.
+23:53:31 INFO  : Context for 'APU' is selected.
+23:53:31 INFO  : System reset is completed.
+23:53:34 INFO  : 'after 3000' command is executed.
+23:53:34 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B7A823A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B7A823A-13722093-0"}' command is executed.
+23:53:35 INFO  : Device configured successfully with "/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/_ide/bitstream/subsystem_db_wrapper.bit"
+23:53:35 INFO  : Context for 'APU' is selected.
+23:53:35 INFO  : Hardware design and registers information is loaded from '/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm/export/axi_timer_pwm/hw/subsystem_db_wrapper.xsa'.
+23:53:35 INFO  : 'configparams force-mem-access 1' command is executed.
+23:53:35 INFO  : Context for 'APU' is selected.
+23:53:35 INFO  : Sourcing of '/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/_ide/psinit/ps7_init.tcl' is done.
+23:53:35 INFO  : 'ps7_init' command is executed.
+23:53:35 INFO  : 'ps7_post_config' command is executed.
+23:53:35 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:53:35 INFO  : The application '/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/Debug/axi_timer_pwm_sw.elf' is downloaded to processor 'ps7_cortexa9_0'.
+23:53:35 INFO  : 'configparams force-mem-access 0' command is executed.
+23:53:35 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B7A823A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B7A823A-13722093-0"}
+fpga -file /home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/_ide/bitstream/subsystem_db_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw /home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm/export/axi_timer_pwm/hw/subsystem_db_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source /home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow /home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/Debug/axi_timer_pwm_sw.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+23:53:35 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:53:35 INFO  : 'con' command is executed.
+23:53:35 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+23:53:35 INFO  : Launch script is exported to file '/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw_system/_ide/scripts/systemdebugger_axi_timer_pwm_sw_system_standalone.tcl'
+23:54:18 INFO  : Disconnected from the channel tcfchan#16.
+23:54:19 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:54:19 INFO  : Jtag cable 'Digilent Zybo Z7 210351B7A823A' is selected.
+23:54:19 INFO  : 'jtag frequency' command is executed.
+23:54:19 INFO  : Context for 'APU' is selected.
+23:54:19 INFO  : System reset is completed.
+23:54:22 INFO  : 'after 3000' command is executed.
+23:54:22 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B7A823A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B7A823A-13722093-0"}' command is executed.
+23:54:24 INFO  : Device configured successfully with "/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/_ide/bitstream/subsystem_db_wrapper.bit"
+23:54:24 INFO  : Context for 'APU' is selected.
+23:54:24 INFO  : Hardware design and registers information is loaded from '/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm/export/axi_timer_pwm/hw/subsystem_db_wrapper.xsa'.
+23:54:24 INFO  : 'configparams force-mem-access 1' command is executed.
+23:54:24 INFO  : Context for 'APU' is selected.
+23:54:24 INFO  : Sourcing of '/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/_ide/psinit/ps7_init.tcl' is done.
+23:54:24 INFO  : 'ps7_init' command is executed.
+23:54:24 INFO  : 'ps7_post_config' command is executed.
+23:54:24 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:54:24 INFO  : The application '/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/Debug/axi_timer_pwm_sw.elf' is downloaded to processor 'ps7_cortexa9_0'.
+23:54:24 INFO  : 'configparams force-mem-access 0' command is executed.
+23:54:24 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B7A823A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B7A823A-13722093-0"}
+fpga -file /home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/_ide/bitstream/subsystem_db_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw /home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm/export/axi_timer_pwm/hw/subsystem_db_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source /home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow /home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/Debug/axi_timer_pwm_sw.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+23:54:24 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:54:24 INFO  : 'con' command is executed.
+23:54:24 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+23:54:24 INFO  : Launch script is exported to file '/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw_system/_ide/scripts/systemdebugger_axi_timer_pwm_sw_system_standalone.tcl'
+23:58:07 INFO  : Checking for BSP changes to sync application flags for project 'axi_timer_pwm_sw'...
+23:58:49 INFO  : Checking for BSP changes to sync application flags for project 'axi_timer_pwm_sw'...
+23:59:01 INFO  : Disconnected from the channel tcfchan#17.
+23:59:02 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:59:02 INFO  : Jtag cable 'Digilent Zybo Z7 210351B7A823A' is selected.
+23:59:02 INFO  : 'jtag frequency' command is executed.
+23:59:02 INFO  : Context for 'APU' is selected.
+23:59:02 INFO  : System reset is completed.
+23:59:05 INFO  : 'after 3000' command is executed.
+23:59:05 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B7A823A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B7A823A-13722093-0"}' command is executed.
+23:59:07 INFO  : Device configured successfully with "/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/_ide/bitstream/subsystem_db_wrapper.bit"
+23:59:07 INFO  : Context for 'APU' is selected.
+23:59:07 INFO  : Hardware design and registers information is loaded from '/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm/export/axi_timer_pwm/hw/subsystem_db_wrapper.xsa'.
+23:59:07 INFO  : 'configparams force-mem-access 1' command is executed.
+23:59:07 INFO  : Context for 'APU' is selected.
+23:59:07 INFO  : Sourcing of '/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/_ide/psinit/ps7_init.tcl' is done.
+23:59:07 INFO  : 'ps7_init' command is executed.
+23:59:07 INFO  : 'ps7_post_config' command is executed.
+23:59:07 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:59:07 INFO  : The application '/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/Debug/axi_timer_pwm_sw.elf' is downloaded to processor 'ps7_cortexa9_0'.
+23:59:07 INFO  : 'configparams force-mem-access 0' command is executed.
+23:59:07 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B7A823A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B7A823A-13722093-0"}
+fpga -file /home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/_ide/bitstream/subsystem_db_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw /home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm/export/axi_timer_pwm/hw/subsystem_db_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source /home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow /home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/Debug/axi_timer_pwm_sw.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+23:59:07 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:59:07 INFO  : 'con' command is executed.
+23:59:07 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+23:59:07 INFO  : Launch script is exported to file '/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw_system/_ide/scripts/systemdebugger_axi_timer_pwm_sw_system_standalone.tcl'
+00:03:04 INFO  : Checking for BSP changes to sync application flags for project 'axi_timer_pwm_sw'...
+00:04:01 INFO  : Checking for BSP changes to sync application flags for project 'axi_timer_pwm_sw'...
+00:04:53 INFO  : Disconnected from the channel tcfchan#19.
+00:04:54 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+00:05:04 INFO  : Jtag cable 'Digilent Zybo Z7 210351B7A823A' is selected.
+00:05:04 INFO  : 'jtag frequency' command is executed.
+00:05:04 INFO  : Context for 'APU' is selected.
+00:05:05 INFO  : System reset is completed.
+00:05:08 INFO  : 'after 3000' command is executed.
+00:05:08 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B7A823A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B7A823A-13722093-0"}' command is executed.
+00:05:09 INFO  : Device configured successfully with "/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/_ide/bitstream/subsystem_db_wrapper.bit"
+00:05:09 INFO  : Context for 'APU' is selected.
+00:05:09 INFO  : Hardware design and registers information is loaded from '/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm/export/axi_timer_pwm/hw/subsystem_db_wrapper.xsa'.
+00:05:09 INFO  : 'configparams force-mem-access 1' command is executed.
+00:05:09 INFO  : Context for 'APU' is selected.
+00:05:09 INFO  : Sourcing of '/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/_ide/psinit/ps7_init.tcl' is done.
+00:05:09 INFO  : 'ps7_init' command is executed.
+00:05:09 INFO  : 'ps7_post_config' command is executed.
+00:05:09 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+00:05:09 INFO  : The application '/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/Debug/axi_timer_pwm_sw.elf' is downloaded to processor 'ps7_cortexa9_0'.
+00:05:09 INFO  : 'configparams force-mem-access 0' command is executed.
+00:05:09 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B7A823A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B7A823A-13722093-0"}
+fpga -file /home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/_ide/bitstream/subsystem_db_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw /home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm/export/axi_timer_pwm/hw/subsystem_db_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source /home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow /home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/Debug/axi_timer_pwm_sw.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+00:05:09 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+00:05:09 INFO  : 'con' command is executed.
+00:05:09 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+00:05:09 INFO  : Launch script is exported to file '/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw_system/_ide/scripts/systemdebugger_axi_timer_pwm_sw_system_standalone.tcl'
+00:06:34 INFO  : Checking for BSP changes to sync application flags for project 'axi_timer_pwm_sw'...
+00:06:45 INFO  : Disconnected from the channel tcfchan#22.
+00:06:46 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+00:06:48 INFO  : Jtag cable 'Digilent Zybo Z7 210351B7A823A' is selected.
+00:06:48 INFO  : 'jtag frequency' command is executed.
+00:06:48 INFO  : Context for 'APU' is selected.
+00:06:48 INFO  : System reset is completed.
+00:06:51 INFO  : 'after 3000' command is executed.
+00:06:51 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B7A823A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B7A823A-13722093-0"}' command is executed.
+00:06:53 INFO  : Device configured successfully with "/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/_ide/bitstream/subsystem_db_wrapper.bit"
+00:06:53 INFO  : Context for 'APU' is selected.
+00:06:53 INFO  : Hardware design and registers information is loaded from '/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm/export/axi_timer_pwm/hw/subsystem_db_wrapper.xsa'.
+00:06:53 INFO  : 'configparams force-mem-access 1' command is executed.
+00:06:53 INFO  : Context for 'APU' is selected.
+00:06:53 INFO  : Sourcing of '/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/_ide/psinit/ps7_init.tcl' is done.
+00:06:53 INFO  : 'ps7_init' command is executed.
+00:06:53 INFO  : 'ps7_post_config' command is executed.
+00:06:53 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+00:06:53 INFO  : The application '/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/Debug/axi_timer_pwm_sw.elf' is downloaded to processor 'ps7_cortexa9_0'.
+00:06:53 INFO  : 'configparams force-mem-access 0' command is executed.
+00:06:53 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B7A823A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B7A823A-13722093-0"}
+fpga -file /home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/_ide/bitstream/subsystem_db_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw /home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm/export/axi_timer_pwm/hw/subsystem_db_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source /home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow /home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/Debug/axi_timer_pwm_sw.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+00:06:53 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+00:06:53 INFO  : 'con' command is executed.
+00:06:53 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+00:06:53 INFO  : Launch script is exported to file '/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw_system/_ide/scripts/systemdebugger_axi_timer_pwm_sw_system_standalone.tcl'
+00:08:18 INFO  : Checking for BSP changes to sync application flags for project 'axi_timer_pwm_sw'...
+00:08:31 INFO  : Disconnected from the channel tcfchan#24.
+00:08:32 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+00:08:41 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+----------------End of Script----------------
+
+00:08:41 ERROR : Could not find FPGA device on the board for connection 'Local'.
+
+
+Troubleshooting hints:
+1. Check whether board is connected to system properly.
+2. In case of zynq board, check whether Digilent/Xilinx cable switch settings are correct.
+3. If you are using Xilinx Platform Cable USB, ensure that status LED is green.
+00:08:53 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+00:08:53 INFO  : Jtag cable 'Digilent Zybo Z7 210351B7A823A' is selected.
+00:08:53 INFO  : 'jtag frequency' command is executed.
+00:08:53 INFO  : Context for 'APU' is selected.
+00:08:53 INFO  : System reset is completed.
+00:08:56 INFO  : 'after 3000' command is executed.
+00:08:56 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B7A823A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B7A823A-13722093-0"}' command is executed.
+00:08:57 INFO  : Device configured successfully with "/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/_ide/bitstream/subsystem_db_wrapper.bit"
+00:08:57 INFO  : Context for 'APU' is selected.
+00:08:57 INFO  : Hardware design and registers information is loaded from '/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm/export/axi_timer_pwm/hw/subsystem_db_wrapper.xsa'.
+00:08:57 INFO  : 'configparams force-mem-access 1' command is executed.
+00:08:57 INFO  : Context for 'APU' is selected.
+00:08:57 INFO  : Sourcing of '/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/_ide/psinit/ps7_init.tcl' is done.
+00:08:57 INFO  : 'ps7_init' command is executed.
+00:08:57 INFO  : 'ps7_post_config' command is executed.
+00:08:57 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+00:08:57 INFO  : The application '/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/Debug/axi_timer_pwm_sw.elf' is downloaded to processor 'ps7_cortexa9_0'.
+00:08:57 INFO  : 'configparams force-mem-access 0' command is executed.
+00:08:57 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B7A823A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B7A823A-13722093-0"}
+fpga -file /home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/_ide/bitstream/subsystem_db_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw /home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm/export/axi_timer_pwm/hw/subsystem_db_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source /home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow /home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/Debug/axi_timer_pwm_sw.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+00:08:57 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+00:08:58 INFO  : 'con' command is executed.
+00:08:58 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+00:08:58 INFO  : Launch script is exported to file '/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw_system/_ide/scripts/systemdebugger_axi_timer_pwm_sw_system_standalone.tcl'
+00:12:12 INFO  : Checking for BSP changes to sync application flags for project 'axi_timer_pwm_sw'...
+00:12:30 INFO  : Disconnected from the channel tcfchan#26.
+00:12:30 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+00:12:31 INFO  : Jtag cable 'Digilent Zybo Z7 210351B7A823A' is selected.
+00:12:31 INFO  : 'jtag frequency' command is executed.
+00:12:31 INFO  : Context for 'APU' is selected.
+00:12:31 INFO  : System reset is completed.
+00:12:34 INFO  : 'after 3000' command is executed.
+00:12:34 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B7A823A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B7A823A-13722093-0"}' command is executed.
+00:12:35 INFO  : Device configured successfully with "/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/_ide/bitstream/subsystem_db_wrapper.bit"
+00:12:35 INFO  : Context for 'APU' is selected.
+00:12:35 INFO  : Hardware design and registers information is loaded from '/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm/export/axi_timer_pwm/hw/subsystem_db_wrapper.xsa'.
+00:12:35 INFO  : 'configparams force-mem-access 1' command is executed.
+00:12:35 INFO  : Context for 'APU' is selected.
+00:12:35 INFO  : Sourcing of '/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/_ide/psinit/ps7_init.tcl' is done.
+00:12:35 INFO  : 'ps7_init' command is executed.
+00:12:35 INFO  : 'ps7_post_config' command is executed.
+00:12:35 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+00:12:35 INFO  : The application '/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/Debug/axi_timer_pwm_sw.elf' is downloaded to processor 'ps7_cortexa9_0'.
+00:12:35 INFO  : 'configparams force-mem-access 0' command is executed.
+00:12:35 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B7A823A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B7A823A-13722093-0"}
+fpga -file /home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/_ide/bitstream/subsystem_db_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw /home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm/export/axi_timer_pwm/hw/subsystem_db_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source /home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow /home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/Debug/axi_timer_pwm_sw.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+00:12:35 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+00:12:35 INFO  : 'con' command is executed.
+00:12:35 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+00:12:35 INFO  : Launch script is exported to file '/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw_system/_ide/scripts/systemdebugger_axi_timer_pwm_sw_system_standalone.tcl'
+00:39:34 INFO  : Disconnected from the channel tcfchan#28.
+00:39:35 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+00:39:36 INFO  : Jtag cable 'Digilent Zybo Z7 210351B7A823A' is selected.
+00:39:36 INFO  : 'jtag frequency' command is executed.
+00:39:36 INFO  : Context for 'APU' is selected.
+00:39:36 INFO  : System reset is completed.
+00:39:39 INFO  : 'after 3000' command is executed.
+00:39:39 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B7A823A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B7A823A-13722093-0"}' command is executed.
+00:39:40 INFO  : Device configured successfully with "/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/_ide/bitstream/subsystem_db_wrapper.bit"
+00:39:40 INFO  : Context for 'APU' is selected.
+00:39:40 INFO  : Hardware design and registers information is loaded from '/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm/export/axi_timer_pwm/hw/subsystem_db_wrapper.xsa'.
+00:39:40 INFO  : 'configparams force-mem-access 1' command is executed.
+00:39:40 INFO  : Context for 'APU' is selected.
+00:39:40 INFO  : Sourcing of '/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/_ide/psinit/ps7_init.tcl' is done.
+00:39:40 INFO  : 'ps7_init' command is executed.
+00:39:40 INFO  : 'ps7_post_config' command is executed.
+00:39:40 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+00:39:40 INFO  : The application '/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/Debug/axi_timer_pwm_sw.elf' is downloaded to processor 'ps7_cortexa9_0'.
+00:39:40 INFO  : 'configparams force-mem-access 0' command is executed.
+00:39:40 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B7A823A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B7A823A-13722093-0"}
+fpga -file /home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/_ide/bitstream/subsystem_db_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw /home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm/export/axi_timer_pwm/hw/subsystem_db_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source /home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow /home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/Debug/axi_timer_pwm_sw.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+00:39:40 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+00:39:40 INFO  : 'con' command is executed.
+00:39:40 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+00:39:40 INFO  : Launch script is exported to file '/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw_system/_ide/scripts/systemdebugger_axi_timer_pwm_sw_system_standalone.tcl'
+00:39:58 INFO  : Checking for BSP changes to sync application flags for project 'axi_timer_pwm_sw'...
+00:40:06 INFO  : Disconnected from the channel tcfchan#29.
+00:40:07 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+00:40:08 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+----------------End of Script----------------
+
+00:40:08 ERROR : Could not find FPGA device on the board for connection 'Local'.
+
+
+Troubleshooting hints:
+1. Check whether board is connected to system properly.
+2. In case of zynq board, check whether Digilent/Xilinx cable switch settings are correct.
+3. If you are using Xilinx Platform Cable USB, ensure that status LED is green.
+00:40:31 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+00:40:31 INFO  : Jtag cable 'Digilent Zybo Z7 210351B7A823A' is selected.
+00:40:31 INFO  : 'jtag frequency' command is executed.
+00:40:31 INFO  : Context for 'APU' is selected.
+00:40:31 INFO  : System reset is completed.
+00:40:34 INFO  : 'after 3000' command is executed.
+00:40:34 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B7A823A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B7A823A-13722093-0"}' command is executed.
+00:40:36 INFO  : Device configured successfully with "/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/_ide/bitstream/subsystem_db_wrapper.bit"
+00:40:36 INFO  : Context for 'APU' is selected.
+00:40:36 INFO  : Hardware design and registers information is loaded from '/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm/export/axi_timer_pwm/hw/subsystem_db_wrapper.xsa'.
+00:40:36 INFO  : 'configparams force-mem-access 1' command is executed.
+00:40:36 INFO  : Context for 'APU' is selected.
+00:40:36 INFO  : Sourcing of '/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/_ide/psinit/ps7_init.tcl' is done.
+00:40:36 INFO  : 'ps7_init' command is executed.
+00:40:36 INFO  : 'ps7_post_config' command is executed.
+00:40:36 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+00:40:36 INFO  : The application '/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/Debug/axi_timer_pwm_sw.elf' is downloaded to processor 'ps7_cortexa9_0'.
+00:40:36 INFO  : 'configparams force-mem-access 0' command is executed.
+00:40:36 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B7A823A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B7A823A-13722093-0"}
+fpga -file /home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/_ide/bitstream/subsystem_db_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw /home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm/export/axi_timer_pwm/hw/subsystem_db_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source /home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow /home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/Debug/axi_timer_pwm_sw.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+00:40:36 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+00:40:36 INFO  : 'con' command is executed.
+00:40:36 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+00:40:36 INFO  : Launch script is exported to file '/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw_system/_ide/scripts/systemdebugger_axi_timer_pwm_sw_system_standalone.tcl'
+00:43:21 INFO  : Checking for BSP changes to sync application flags for project 'axi_timer_pwm_sw'...
+00:43:55 INFO  : Checking for BSP changes to sync application flags for project 'axi_timer_pwm_sw'...
+00:44:07 INFO  : Disconnected from the channel tcfchan#30.
+00:44:07 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+00:44:07 INFO  : Jtag cable 'Digilent Zybo Z7 210351B7A823A' is selected.
+00:44:07 INFO  : 'jtag frequency' command is executed.
+00:44:07 INFO  : Context for 'APU' is selected.
+00:44:07 INFO  : System reset is completed.
+00:44:10 INFO  : 'after 3000' command is executed.
+00:44:11 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B7A823A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B7A823A-13722093-0"}' command is executed.
+00:44:12 INFO  : Device configured successfully with "/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/_ide/bitstream/subsystem_db_wrapper.bit"
+00:44:12 INFO  : Context for 'APU' is selected.
+00:44:12 INFO  : Hardware design and registers information is loaded from '/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm/export/axi_timer_pwm/hw/subsystem_db_wrapper.xsa'.
+00:44:12 INFO  : 'configparams force-mem-access 1' command is executed.
+00:44:12 INFO  : Context for 'APU' is selected.
+00:44:12 INFO  : Sourcing of '/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/_ide/psinit/ps7_init.tcl' is done.
+00:44:12 INFO  : 'ps7_init' command is executed.
+00:44:12 INFO  : 'ps7_post_config' command is executed.
+00:44:12 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+00:44:12 INFO  : The application '/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/Debug/axi_timer_pwm_sw.elf' is downloaded to processor 'ps7_cortexa9_0'.
+00:44:12 INFO  : 'configparams force-mem-access 0' command is executed.
+00:44:12 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B7A823A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B7A823A-13722093-0"}
+fpga -file /home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/_ide/bitstream/subsystem_db_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw /home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm/export/axi_timer_pwm/hw/subsystem_db_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source /home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow /home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/Debug/axi_timer_pwm_sw.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+00:44:12 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+00:44:12 INFO  : 'con' command is executed.
+00:44:12 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+00:44:12 INFO  : Launch script is exported to file '/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw_system/_ide/scripts/systemdebugger_axi_timer_pwm_sw_system_standalone.tcl'
+00:45:01 INFO  : Disconnected from the channel tcfchan#33.
+00:45:02 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+00:45:12 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+----------------End of Script----------------
+
+00:45:12 ERROR : Could not find Jtag device on the board for connection 'Local'.
+
+
+Troubleshooting hints:
+1. Check whether board is connected to system properly.
+2. In case of zynq board, check whether Digilent/Xilinx cable switch settings are correct.
+3. If you are using Xilinx Platform Cable USB, ensure that status LED is green.
+00:55:19 INFO  : Checking for BSP changes to sync application flags for project 'axi_timer_pwm_sw'...
+00:55:38 INFO  : Checking for BSP changes to sync application flags for project 'axi_timer_pwm_sw'...
+00:56:01 INFO  : Checking for BSP changes to sync application flags for project 'axi_timer_pwm_sw'...
+00:56:52 INFO  : Checking for BSP changes to sync application flags for project 'axi_timer_pwm_sw'...
+00:57:59 INFO  : Checking for BSP changes to sync application flags for project 'axi_timer_pwm_sw'...
+00:58:08 INFO  : Checking for BSP changes to sync application flags for project 'axi_timer_pwm_sw'...
+01:00:50 INFO  : Checking for BSP changes to sync application flags for project 'axi_timer_pwm_sw'...
+01:02:22 INFO  : Checking for BSP changes to sync application flags for project 'axi_timer_pwm_sw'...
+01:02:55 INFO  : Checking for BSP changes to sync application flags for project 'axi_timer_pwm_sw'...
+01:04:20 INFO  : Checking for BSP changes to sync application flags for project 'axi_timer_pwm_sw'...
+01:07:05 INFO  : Checking for BSP changes to sync application flags for project 'axi_timer_pwm_sw'...
+01:07:57 INFO  : Checking for BSP changes to sync application flags for project 'axi_timer_pwm_sw'...
+01:08:16 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+01:08:16 INFO  : Jtag cable 'Digilent Zybo Z7 210351B7A823A' is selected.
+01:08:16 INFO  : 'jtag frequency' command is executed.
+01:08:16 INFO  : Context for 'APU' is selected.
+01:08:16 INFO  : System reset is completed.
+01:08:19 INFO  : 'after 3000' command is executed.
+01:08:19 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B7A823A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B7A823A-13722093-0"}' command is executed.
+01:08:21 INFO  : Device configured successfully with "/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/_ide/bitstream/subsystem_db_wrapper.bit"
+01:08:21 INFO  : Context for 'APU' is selected.
+01:08:21 INFO  : Hardware design and registers information is loaded from '/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm/export/axi_timer_pwm/hw/subsystem_db_wrapper.xsa'.
+01:08:21 INFO  : 'configparams force-mem-access 1' command is executed.
+01:08:21 INFO  : Context for 'APU' is selected.
+01:08:21 INFO  : Sourcing of '/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/_ide/psinit/ps7_init.tcl' is done.
+01:08:21 INFO  : 'ps7_init' command is executed.
+01:08:21 INFO  : 'ps7_post_config' command is executed.
+01:08:21 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:08:21 INFO  : The application '/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/Debug/axi_timer_pwm_sw.elf' is downloaded to processor 'ps7_cortexa9_0'.
+01:08:21 INFO  : 'configparams force-mem-access 0' command is executed.
+01:08:21 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B7A823A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B7A823A-13722093-0"}
+fpga -file /home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/_ide/bitstream/subsystem_db_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw /home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm/export/axi_timer_pwm/hw/subsystem_db_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source /home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow /home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/Debug/axi_timer_pwm_sw.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+01:08:21 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:08:21 INFO  : 'con' command is executed.
+01:08:21 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+01:08:21 INFO  : Launch script is exported to file '/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw_system/_ide/scripts/systemdebugger_axi_timer_pwm_sw_system_standalone.tcl'
+01:09:17 INFO  : Checking for BSP changes to sync application flags for project 'axi_timer_pwm_sw'...
+01:09:36 INFO  : Disconnected from the channel tcfchan#34.
+01:09:37 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+01:09:46 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+----------------End of Script----------------
+
+01:09:46 ERROR : Could not find FPGA device on the board for connection 'Local'.
+
+
+Troubleshooting hints:
+1. Check whether board is connected to system properly.
+2. In case of zynq board, check whether Digilent/Xilinx cable switch settings are correct.
+3. If you are using Xilinx Platform Cable USB, ensure that status LED is green.
+01:09:56 INFO  : Checking for BSP changes to sync application flags for project 'axi_timer_pwm_sw'...
+01:10:05 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+01:10:06 INFO  : Jtag cable 'Digilent Zybo Z7 210351B7A823A' is selected.
+01:10:06 INFO  : 'jtag frequency' command is executed.
+01:10:06 INFO  : Context for 'APU' is selected.
+01:10:06 INFO  : System reset is completed.
+01:10:09 INFO  : 'after 3000' command is executed.
+01:10:09 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B7A823A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B7A823A-13722093-0"}' command is executed.
+01:10:10 INFO  : Device configured successfully with "/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/_ide/bitstream/subsystem_db_wrapper.bit"
+01:10:10 INFO  : Context for 'APU' is selected.
+01:10:10 INFO  : Hardware design and registers information is loaded from '/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm/export/axi_timer_pwm/hw/subsystem_db_wrapper.xsa'.
+01:10:10 INFO  : 'configparams force-mem-access 1' command is executed.
+01:10:10 INFO  : Context for 'APU' is selected.
+01:10:10 INFO  : Sourcing of '/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/_ide/psinit/ps7_init.tcl' is done.
+01:10:10 INFO  : 'ps7_init' command is executed.
+01:10:10 INFO  : 'ps7_post_config' command is executed.
+01:10:10 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:10:10 INFO  : The application '/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/Debug/axi_timer_pwm_sw.elf' is downloaded to processor 'ps7_cortexa9_0'.
+01:10:10 INFO  : 'configparams force-mem-access 0' command is executed.
+01:10:10 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B7A823A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B7A823A-13722093-0"}
+fpga -file /home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/_ide/bitstream/subsystem_db_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw /home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm/export/axi_timer_pwm/hw/subsystem_db_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source /home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow /home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/Debug/axi_timer_pwm_sw.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+01:10:10 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:10:10 INFO  : 'con' command is executed.
+01:10:10 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+01:10:10 INFO  : Launch script is exported to file '/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw_system/_ide/scripts/systemdebugger_axi_timer_pwm_sw_system_standalone.tcl'
+01:11:16 INFO  : Checking for BSP changes to sync application flags for project 'axi_timer_pwm_sw'...
+01:11:28 INFO  : Disconnected from the channel tcfchan#47.
+01:11:29 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+01:11:29 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+----------------End of Script----------------
+
+01:11:29 ERROR : Could not find FPGA device on the board for connection 'Local'.
+
+
+Troubleshooting hints:
+1. Check whether board is connected to system properly.
+2. In case of zynq board, check whether Digilent/Xilinx cable switch settings are correct.
+3. If you are using Xilinx Platform Cable USB, ensure that status LED is green.
+01:11:35 INFO  : Checking for BSP changes to sync application flags for project 'axi_timer_pwm_sw'...
+01:11:47 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+01:11:47 INFO  : Jtag cable 'Digilent Zybo Z7 210351B7A823A' is selected.
+01:11:47 INFO  : 'jtag frequency' command is executed.
+01:11:47 INFO  : Context for 'APU' is selected.
+01:11:47 INFO  : System reset is completed.
+01:11:50 INFO  : 'after 3000' command is executed.
+01:11:50 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B7A823A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B7A823A-13722093-0"}' command is executed.
+01:11:51 INFO  : Device configured successfully with "/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/_ide/bitstream/subsystem_db_wrapper.bit"
+01:11:51 INFO  : Context for 'APU' is selected.
+01:11:51 INFO  : Hardware design and registers information is loaded from '/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm/export/axi_timer_pwm/hw/subsystem_db_wrapper.xsa'.
+01:11:51 INFO  : 'configparams force-mem-access 1' command is executed.
+01:11:51 INFO  : Context for 'APU' is selected.
+01:11:51 INFO  : Sourcing of '/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/_ide/psinit/ps7_init.tcl' is done.
+01:11:51 INFO  : 'ps7_init' command is executed.
+01:11:51 INFO  : 'ps7_post_config' command is executed.
+01:11:51 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:11:51 INFO  : The application '/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/Debug/axi_timer_pwm_sw.elf' is downloaded to processor 'ps7_cortexa9_0'.
+01:11:51 INFO  : 'configparams force-mem-access 0' command is executed.
+01:11:51 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B7A823A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B7A823A-13722093-0"}
+fpga -file /home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/_ide/bitstream/subsystem_db_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw /home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm/export/axi_timer_pwm/hw/subsystem_db_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source /home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow /home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/Debug/axi_timer_pwm_sw.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+01:11:51 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:11:51 INFO  : 'con' command is executed.
+01:11:51 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+01:11:51 INFO  : Launch script is exported to file '/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw_system/_ide/scripts/systemdebugger_axi_timer_pwm_sw_system_standalone.tcl'
+01:13:30 INFO  : Checking for BSP changes to sync application flags for project 'axi_timer_pwm_sw'...
+01:13:45 INFO  : Disconnected from the channel tcfchan#50.
+01:13:45 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+01:13:45 INFO  : Jtag cable 'Digilent Zybo Z7 210351B7A823A' is selected.
+01:13:45 INFO  : 'jtag frequency' command is executed.
+01:13:45 INFO  : Context for 'APU' is selected.
+01:13:45 INFO  : System reset is completed.
+01:13:48 INFO  : 'after 3000' command is executed.
+01:13:49 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B7A823A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B7A823A-13722093-0"}' command is executed.
+01:13:50 INFO  : Device configured successfully with "/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/_ide/bitstream/subsystem_db_wrapper.bit"
+01:13:50 INFO  : Context for 'APU' is selected.
+01:13:50 INFO  : Hardware design and registers information is loaded from '/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm/export/axi_timer_pwm/hw/subsystem_db_wrapper.xsa'.
+01:13:50 INFO  : 'configparams force-mem-access 1' command is executed.
+01:13:50 INFO  : Context for 'APU' is selected.
+01:13:50 INFO  : Sourcing of '/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/_ide/psinit/ps7_init.tcl' is done.
+01:13:50 INFO  : 'ps7_init' command is executed.
+01:13:50 INFO  : 'ps7_post_config' command is executed.
+01:13:50 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:13:50 INFO  : The application '/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/Debug/axi_timer_pwm_sw.elf' is downloaded to processor 'ps7_cortexa9_0'.
+01:13:50 INFO  : 'configparams force-mem-access 0' command is executed.
+01:13:50 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B7A823A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B7A823A-13722093-0"}
+fpga -file /home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/_ide/bitstream/subsystem_db_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw /home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm/export/axi_timer_pwm/hw/subsystem_db_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source /home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow /home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw/Debug/axi_timer_pwm_sw.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+01:13:50 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:13:50 INFO  : 'con' command is executed.
+01:13:50 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+01:13:50 INFO  : Launch script is exported to file '/home/mg/Documents/sk8_drone/xilinx_test_projects/axi_timer_pwm/software/axi_timer_pwm_sw_system/_ide/scripts/systemdebugger_axi_timer_pwm_sw_system_standalone.tcl'
+01:26:04 INFO  : Checking for BSP changes to sync application flags for project 'axi_timer_pwm_sw'...

@@ -1,0 +1,102 @@
+#include <stdio.h>
+#include "platform.h"
+#include "xil_printf.h"
+#include "xtmrctr.h"
+#include "xgpio.h"
+#include "xparameters.h"
+#include "sleep.h"
+
+#define TMR_CTR_0 0
+#define ONE_mSec (1e9)/1e3
+#define PWM_PER (ONE_mSec*20)
+
+XTmrCtr tmr;
+XGpio switches;
+
+void tmr_init() {
+	int status = XTmrCtr_Initialize(&tmr, XPAR_TIMER0_DEVICE_ID);
+	if(status == XST_SUCCESS) {
+		xil_printf("TMR INIT SUCCUSSFUL\n\r");
+	} else {
+		xil_printf("TMR INIT FAILED\n\r");
+	}
+	 status = XTmrCtr_SelfTest(&tmr, TMR_CTR_0);
+	if(status == XST_SUCCESS) {
+		xil_printf("TMR SELF TEST SUCCUSSFUL\n\r");
+	} else {
+		xil_printf("TMR SELF TEST FAILED\n\r");
+	}
+}
+
+void switches_init() {
+	int status = XGpio_Initialize(&switches, XPAR_SWITCH_DEVICE_ID);
+	if(status == XST_SUCCESS) {
+		xil_printf("SWITCHES INIT SUCCUSSFUL\n\r");
+	} else {
+		xil_printf("SWITCHES INIT FAILED\n\r");
+	}
+}
+
+void tmr_setup() {
+	XTmrCtr_Stop(&tmr, TMR_CTR_0);
+	u32 tmrctr0_option = XTmrCtr_GetOptions(&tmr, TMR_CTR_0);
+	tmrctr0_option |= XTC_DOWN_COUNT_OPTION;
+	XTmrCtr_SetOptions(&tmr, TMR_CTR_0, tmrctr0_option);
+	XTmrCtr_PwmConfigure(&tmr, PWM_PER, ONE_mSec);
+	XTmrCtr_PwmEnable(&tmr);
+	XTmrCtr_Start(&tmr, TMR_CTR_0);
+}
+
+void update_pwm(int duty_cycle) {
+	XTmrCtr_Stop(&tmr, TMR_CTR_0);
+	XTmrCtr_PwmConfigure(&tmr, PWM_PER, duty_cycle);
+	XTmrCtr_PwmEnable(&tmr);
+	XTmrCtr_Start(&tmr, TMR_CTR_0);
+}
+
+void switches_setup() {
+	XGpio_SetDataDirection(&switches, 1, 0xF);
+}
+
+void change_pwm(int sw_val) {
+	sw_val = XGpio_DiscreteRead(&switches, 1);
+	xil_printf("sw val : %d\n\r", sw_val);
+	switch (sw_val) {
+		case 0x1:
+			update_pwm(ONE_mSec);
+			break;
+		case 0x2:
+			update_pwm((12e8)/1e3);
+			break;
+		case 0x4:
+			update_pwm((15e8)/1e3);
+			break;
+		case 0x8:
+			update_pwm(ONE_mSec*2);
+			break;
+		default:
+			update_pwm(ONE_mSec);
+			break;
+	}
+//    	XTmrCtr_PwmConfigure(&tmr, (1e9), (1e8));
+//    	sleep(5);
+//    	XTmrCtr_PwmConfigure(&tmr, (1e9), (5e8));
+//    	sleep(5);
+}
+
+int main()
+{
+    init_platform();
+    switches_init();
+    switches_setup();
+    tmr_init();
+    tmr_setup();
+    int sw_val = 0;
+    while(1) {
+//    	change_pwm();
+    }
+    print("Hello World\n\r");
+    print("Successfully ran Hello World application");
+    cleanup_platform();
+    return 0;
+}
