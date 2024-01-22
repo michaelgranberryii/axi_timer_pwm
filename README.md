@@ -1,6 +1,6 @@
-# Zybo Z7-10 PWM codefor brushless motor
+# Zybo Z7-10 PWM code for brushless motor
 
-Experimenting with a Zybo Z7-10, pwm, and a brushless motor for a DIY drone project.
+Experimenting with a Zybo Z7-10, PWM, and a brushless motor for a DIY drone project.
 
 ## Dependencies
 
